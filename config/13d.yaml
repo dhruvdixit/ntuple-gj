@@ -1,0 +1,20 @@
+gridWorkingDir:		workingdir_yslai
+gridOutputDir:		outputdir_13d
+aliROOTVersion:         v5-09-34-1
+aliPhysicsVersion:      vAN-20180725-1
+package:		fastjet::v3.2.1_1.024-alice3-2
+package:		cgal::v4.6.3-25
+package:		boost::v1.59.0-19
+package:	        MPFR::v3.1.3-4
+package:                GMP::v6.0.0-2
+package:                GCC-Toolchain::v4.9.3-alice3-1
+gridDataDir:		/alice/data/2013/LHC13d
+dataPattern:		/pass4/*/AliESDs.root
+runPrefix:              000
+#runNumber:		[195872, 195871, 195867, 195831, 195829, 195787, 195783, 195767, 195760, 195724]
+runNumber:		[195872]
+emcalCorrection:		emcal_correction.yaml
+emcalGeometryFilename:  	geometry_2015.root
+emcalLocal2MasterFilename:  	EMCALlocal2master.root
+#skimClusterMinE:        10.0
+splitMaxInputFileNumber: 	20.0
