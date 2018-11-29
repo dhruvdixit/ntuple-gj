@@ -517,7 +517,7 @@ void AliAnalysisTaskNTGJ::UserExec(Option_t *option)
 
         _track_cut.back().SetRequireITSPureStandAlone(kTRUE);
         _track_cut.back().SetPtRange(0.15, 1e+15);
-        _track_cut.back().SetMinNClustersITS(5);
+        _track_cut.back().SetMinNClustersITS(4);
         _track_cut.back().SetMaxDCAToVertexXY(2.4);
         _track_cut.back().SetMaxDCAToVertexZ(3.2);
         _track_cut.back().SetDCAToVertex2D(kTRUE);
