@@ -1292,7 +1292,10 @@ void AliAnalysisTaskNTGJ::UserExec(Option_t *option)
             }
 
             if (p->GetGeneratorIndex() != 0 || !subtract_ue) {
-                const unsigned int abs_pdg_code =
+              
+	      if(p->Charge()==0) continue; //leave only charged particles in jet truth definition
+
+	      const unsigned int abs_pdg_code =
                     std::abs(p->PdgCode());
 
                 switch (abs_pdg_code) {
@@ -2088,6 +2091,8 @@ void AliAnalysisTaskNTGJ::UserExec(Option_t *option)
                     const AliMCParticle *t =
                         static_cast<AliMCParticle *>(
                             mc_truth_event->GetTrack(j));
+		    
+		    if(t->Charge()==0) continue; //leave only charged particles in jet truth definition
 
                     if (t->GetGeneratorIndex() != 0 || !subtract_ue) {
                         const double dpseudorapidity =
