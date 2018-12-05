@@ -17,7 +17,7 @@ CellTimeCalib:
 Clusterizer:
     enabled: true
     createHistos: true
-    clusterizer: kClusterizerv2
+    clusterizer: kClusterizerv1
     recalDistToBadChannels: true
     cellE: 0.1
     seedE: 0.5
