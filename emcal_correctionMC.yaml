@@ -32,6 +32,6 @@ ClusterTrackMatcher:
     createHistos: true
 
 CellEmulateCrosstalk:
-    enabled: true
+    enabled: false
     createHistos: true
     inducedTCardMinimum: 0.1

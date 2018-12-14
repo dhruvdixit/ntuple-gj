@@ -1,0 +1,15 @@
+gridWorkingDir:         workingdir
+gridOutputDir:          outputdir_18b10a_calo_pthat1
+aliROOTVersion:         v5-09-34-1
+aliPhysicsVersion:      vAN-20180725-1
+package:                fastjet::v3.2.1_1.024-alice3-2
+package:                cgal::v4.6.3-25
+package:                boost::v1.59.0-19
+package:                MPFR::v3.1.3-4
+package:                GMP::v6.0.0-2
+package:                GCC-Toolchain::v4.9.3-alice3-1
+gridDataDir:            /alice/sim/2018/LHC18b10a_calo/1
+dataPattern:            */*/AliESDs.root
+runPrefix:
+runNumber:              [282441, 282440, 282439, 282437, 282415, 282411, 282402, 282399, 282398, 282393, 282392, 282391, 282343, 282342, 282341, 282340, 282314, 282313, 282212, 282307, 282306, 282305, 282304, 282303, 282302, 282247, 282230, 282229, 282227, 282224, 282206, 282189, 282147, 282146, 282127, 282126, 282125, 282123, 282122, 282119, 282118, 282099, 282098, 282078,, 282051, 282031, 282025]
+emcalCorrection:        emcal_correctionMC.yaml

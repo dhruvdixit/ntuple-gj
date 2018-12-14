@@ -1,0 +1,14 @@
+gridWorkingDir:		workingdir
+gridOutputDir:		outputdir_17q_CENT_wSDD
+aliROOTVersion:         v5-09-27-1
+aliPhysicsVersion:      vAN-20180423-1
+gridDataDir:		/alice/data/2017/LHC17q
+dataPattern:		/pass1_CENT_wSDD/*/AliESDs.root
+runPrefix:              000
+runNumber:              [282441, 282440, 282439, 282437, 282415, 282411, 282402, 282399, 282398, 282393, 282392, 282391, 282367, 282366, 282365]
+#runNumber:              [282441]
+emcalCorrection:        emcal_correction.yaml
+emcalGeometryFilename:  geometry_2015.root
+emcalLocal2MasterFilename:  EMCALlocal2master.root
+skimClusterMinE:        10.0
+#splitMaxInputFileNumber: 20

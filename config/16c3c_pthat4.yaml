@@ -1,0 +1,11 @@
+gridWorkingDir:		workingdir
+gridOutputDir:		outputdir_16c3c_pthat4_v1
+aliROOTVersion:         v5-09-27-1
+aliPhysicsVersion:      vAN-20180423-1
+gridDataDir:		/alice/sim/2016/LHC16c3c/4/
+dataPattern:		*/*/AliESDs.root
+runPrefix:		
+runNumber:		[195724, 195831, 195872, 196085, 196187, 196310]
+emcalCorrection:	emcal_correction.yaml
+emcalGeometryFilename:          geometry_2015.root
+emcalLocal2MasterFilename:      EMCALlocal2master.root

@@ -1,0 +1,10 @@
+gridWorkingDir:         workingdir
+gridOutputDir:          outputdir_18b10a_calo_pthat3_v1_4runs
+aliROOTVersion:         v5-09-27-1
+aliPhysicsVersion:      vAN-20180423-1
+gridDataDir:            /alice/sim/2018/LHC18b10b_calo/3/
+dataPattern:            */*/AliESDs.root
+runPrefix:
+#runNumber:              [282439, 282402, 282441, 282437, 282415, 282399, 282391]
+runNumber:              [282439, 282402, 282441, 282437]
+emcalCorrection:        emcal_correctionMC.yaml

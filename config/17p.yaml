@@ -1,0 +1,11 @@
+gridWorkingDir:         workingdir
+gridOutputDir:          outputdir_17p
+aliROOTVersion:         v5-09-27-1
+aliPhysicsVersion:      vAN-20180423-1
+gridDataDir:            /alice/data/2017/LHC17p
+dataPattern:            /pass1_CENT_wSDD/*/AliESDs.root
+runPrefix:		000
+runNumber:              [282343, 282342]
+emcalCorrection:	emcal_correction.yaml
+emcalGeometryFilename:	geometry_2015.root
+emcalLocal2MasterFilename: EMCALlocal2master.root

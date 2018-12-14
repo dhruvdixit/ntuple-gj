@@ -1,0 +1,12 @@
+gridWorkingDir:		workingdir
+gridOutputDir:		outputdir_18b8_cent_pthat1
+aliROOTVersion:         v5-09-27-1
+aliPhysicsVersion:      vAN-20180423-1
+gridDataDir:            /alice/sim/2018/LHC18b8_cent/1/
+dataPattern:		*/*/AliAOD.root
+runPrefix:		
+runNumber:              [282366]
+emcalCorrection:        emcal_correction_18b.yaml
+emcalGeometryFilename:  geometry_2015.root
+emcalLocal2MasterFilename:  EMCALlocal2master.root
+splitMaxInputFileNumber: 50
