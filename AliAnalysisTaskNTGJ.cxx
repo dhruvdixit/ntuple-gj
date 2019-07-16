@@ -1165,7 +1165,9 @@ void AliAnalysisTaskNTGJ::UserExec(Option_t *option)
 
             TLorentzVector p;
 
+	    
             c->GetMomentum(p, _branch_primary_vertex);
+	   
 
             const fastjet::PseudoJet
                 pj(p.Px(), p.Py(), p.Pz(), p.P());
@@ -1319,7 +1321,7 @@ void AliAnalysisTaskNTGJ::UserExec(Option_t *option)
 
             if (p->GetGeneratorIndex() != 0 || !subtract_ue) {
               
-	      if(p->Charge()==0) continue; //leave only charged particles in jet truth definition
+	      //if(p->Charge()==0) continue; //leave only charged particles in jet truth definition
 
 	      const unsigned int abs_pdg_code =
                     std::abs(p->PdgCode());
@@ -1610,15 +1612,23 @@ void AliAnalysisTaskNTGJ::UserExec(Option_t *option)
         AliVCluster *c = _nrandom_isolation > 0 ? &dummy_cluster :
             static_cast<AliVCluster *>(calo_cluster.At(i));
         TLorentzVector p;
-
         c->GetMomentum(p, _branch_primary_vertex);
-
+	
         _branch_cluster_e[_branch_ncluster] = half(p.E());
         _branch_cluster_pt[_branch_ncluster] = half(p.Pt());
         _branch_cluster_eta[_branch_ncluster] = half(p.Eta());
         _branch_cluster_phi[_branch_ncluster] =
             half(angular_range_reduce(p.Phi()));
 
+	TLorentzVector p2;
+	c->GetMomentum(p2, _branch_primary_vertex, AliVCluster::kNonLinCorr);
+	_branch_cluster_e_nonLinCorr[_branch_ncluster] = half(p2.E());
+        _branch_cluster_pt_nonLinCorr[_branch_ncluster] = half(p2.Pt());
+        _branch_cluster_eta_nonLinCorr[_branch_ncluster] = half(p2.Eta());
+        _branch_cluster_phi_nonLinCorr[_branch_ncluster] =
+            half(angular_range_reduce(p2.Phi()));
+	
+	
         _branch_cluster_lambda_square[_branch_ncluster][0] =
             half(c->GetM02());
         _branch_cluster_lambda_square[_branch_ncluster][1] =
@@ -1888,9 +1898,11 @@ void AliAnalysisTaskNTGJ::UserExec(Option_t *option)
 
                 AliVCluster *c =
                     static_cast<AliVCluster *>(calo_cluster.At(i));
-                TLorentzVector p1;
 
+		TLorentzVector p1;
                 c->GetMomentum(p1, _branch_primary_vertex);
+		//TLorentzVector p2;
+                //c->GetMomentum(p2, _branch_primary_vertex);
 
                 const double dpseudorapidity = p1.Eta() - p.Eta();
                 const double dazimuth = angular_range_reduce(
@@ -2118,7 +2130,7 @@ void AliAnalysisTaskNTGJ::UserExec(Option_t *option)
                         static_cast<AliMCParticle *>(
                             mc_truth_event->GetTrack(j));
 		    
-		    if(t->Charge()==0) continue; //leave only charged particles in jet truth definition
+		    //if(t->Charge()==0) continue; //leave only charged particles in jet truth definition
 
                     if (t->GetGeneratorIndex() != 0 || !subtract_ue) {
                         const double dpseudorapidity =
