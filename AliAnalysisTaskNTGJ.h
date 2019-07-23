@@ -97,8 +97,8 @@ private:
     BRANCH_ARRAY(cluster_eta, ncluster, F)                          \
     BRANCH_ARRAY(cluster_phi, ncluster, F)                          \
     BRANCH_ARRAY(cluster_e_nonLinCorr, ncluster, F)                 \
-    BRANCH_ARRAY(cluster_pt_nonLinCorr, ncluster, F)                \ 
-    BRANCH_ARRAY(cluster_eta_nonLinCorr, ncluster, F)               \ 
+    BRANCH_ARRAY(cluster_pt_nonLinCorr, ncluster, F)                \
+    BRANCH_ARRAY(cluster_eta_nonLinCorr, ncluster, F)               \
     BRANCH_ARRAY(cluster_phi_nonLinCorr, ncluster, F)               \
     BRANCH_ARRAY2(cluster_lambda_square, ncluster, 2, F)	    \
     BRANCH_ARRAY2(cluster_lambda_square_angle, ncluster, 2, F)      \

@@ -753,7 +753,14 @@ void AliAnalysisTaskNTGJ::UserExec(Option_t *option)
             return;
         }
     }
-
+    
+    /*_branch_nTracklet = INT_MIN;
+    _branch_nClustersITSLayer0 = INT_MIN;
+    _branch_nClustersITSLayer1 = INT_MIN;
+    _branch_nTracklet = event->GetMultiplicity()->GetNumberOfTracklets();
+    _branch_nClustersITSLayer0 = event->GetNumberOfITSClusters(0);
+    _branch_nClustersITSLayer1 = event->GetNumberOfITSClusters(1);*/
+    
     TRefArray calo_cluster;
 
     event->GetEMCALClusters(&calo_cluster);
