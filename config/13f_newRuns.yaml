@@ -11,10 +11,9 @@ package:                GCC-Toolchain::v4.9.3-alice3-9
 gridDataDir:            /alice/data/2013/LHC13f
 dataPattern:            /pass4/*/AliESDs.root
 runPrefix:              000
-#runNumber:              [196533, 196563, 196564, 196566, 196568, 196601, 196605, 197031, 197089, 197090, 197094, 197098, 197099, 197184]
 runNumber:              [196433, 196474, 196475, 196477, 196722, 196772, 196773, 196774, 196869, 196870, 196874, 196876, 197139, 197142, 197143, 197144, 197145, 197147, 197148, 197149, 197150, 197348, 197349, 197351, 197386, 197387, 197388]
 emcalCorrection:                emcal_correction.yaml
 emcalGeometryFilename:          geometry_2015.root
 emcalLocal2MasterFilename:      EMCALlocal2master.root
-skimClusterMinE:        12.0
+#skimClusterMinE:        12.0
 splitMaxInputFileNumber:        30.0

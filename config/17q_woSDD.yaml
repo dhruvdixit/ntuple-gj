@@ -1,5 +1,5 @@
 gridWorkingDir:		workingdir
-gridOutputDir:		outputdir_17q_CENT_wSDD_noThresh_EMCgoodrun_282365
+gridOutputDir:		outputdir_17q_CENT_woSDD
 aliROOTVersion:         v5-09-44-1
 aliPhysicsVersion:      vAN-20190109-1
 package:                fastjet::v3.2.1_1.024-alice3-7
@@ -9,12 +9,12 @@ package:                MPFR::v3.1.3-3
 package:                GMP::v6.0.0-1
 package:                GCC-Toolchain::v4.9.3-alice3-9
 gridDataDir:		/alice/data/2017/LHC17q
-dataPattern:		/pass1_CENT_wSDD/*/AliESDs.root
+dataPattern:		/pass1_CENT_woSDD/*/AliESDs.root
 runPrefix:              000
-runNumber:              [282365]
-#runNumber:              [282441, 282440,282439, 282437, 282415, 282411, 282402, 282399, 282398, 282393, 282392, 282391, 282367, 282366, 282365]
-emcalCorrection:        emcal_correction_pp.yaml
+runNumber:              [282441, 282440, 282439, 282437, 282415, 282411, 282402, 282399, 282398, 282393, 282392, 282391, 282367, 282366, 282365]
+#runNumber:              [282441]
+emcalCorrection:        emcal_correction.yaml
 emcalGeometryFilename:  geometry_2015.root
 emcalLocal2MasterFilename:  EMCALlocal2master.root
-#skimClusterMinE:        10.0
+skimClusterMinE:        10.0
 #splitMaxInputFileNumber: 20

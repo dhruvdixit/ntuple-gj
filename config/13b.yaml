@@ -1,17 +1,18 @@
 gridWorkingDir:		workingdir
-gridOutputDir:		outputdir_13b_pass4_v1_9run
-aliROOTVersion:         v5-09-34-1
-aliPhysicsVersion:      vAN-20180727-1
-package:                fastjet::v3.2.1_1.024-alice3-2
-package:                cgal::v4.6.3-25
-package:                boost::v1.59.0-19
-package:                MPFR::v3.1.3-4
-package:                GMP::v6.0.0-2
-package:                GCC-Toolchain::v4.9.3-alice3-1
+gridOutputDir:		outputdir_13b_pass4_v1_4run
+aliROOTVersion:         v5-09-44-1
+aliPhysicsVersion:      vAN-20190109-1
+package:                fastjet::v3.2.1_1.024-alice3-7
+package:                cgal::v4.6.3-28
+package:                boost::v1.59.0-22
+package:                MPFR::v3.1.3-3
+package:                GMP::v6.0.0-1
+package:                GCC-Toolchain::v4.9.3-alice3-9
 gridDataDir:		/alice/data/2013/LHC13b
 dataPattern:		/pass4/*/AliESDs.root
 runPrefix:              000
-runNumber:		[195344, 195351, 195389, 195391, 195478, 195479, 195480, 195481, 195482]
+#runNumber:		[195344, 195351, 195389, 195391, 195478, 195479, 195480, 195481, 195482]
+runNumber:		[195344, 195351, 195389, 195391]
 emcalCorrection:	emcal_correction.yaml
 emcalGeometryFilename:  geometry_2015.root
 emcalLocal2MasterFilename:  EMCALlocal2master.root

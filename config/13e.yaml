@@ -1,22 +1,24 @@
 gridWorkingDir:		workingdir
-gridOutputDir:		outputdir_13e_skimmed10
-aliROOTVersion:         v5-09-27-1
-aliPhysicsVersion:      vAN-20180423-1
-#package:		fastjet::v3.2.1_1.024-alice3-2
-#package:		cgal::v4.6.3-25
-#package:		boost::v1.59.0-19
-#package:	        MPFR::v3.1.3-4
-#package:                GMP::v6.0.0-2
-#package:                GCC-Toolchain::v4.9.3-alice3-1
+gridOutputDir:		outputdir_13e_10runs_noSkim_part2
+aliROOTVersion:         v5-09-44-1
+aliPhysicsVersion:      vAN-20190109-1
+package:                fastjet::v3.2.1_1.024-alice3-7
+package:                cgal::v4.6.3-28
+package:                boost::v1.59.0-22
+package:                MPFR::v3.1.3-3
+package:                GMP::v6.0.0-1
+package:                GCC-Toolchain::v4.9.3-alice3-9
 gridDataDir:		/alice/data/2013/LHC13e
 dataPattern:		/pass4/*/AliESDs.root
 runPrefix:              000
-runNumber:		[196310, 196309, 196308, 196214, 196208, 196201, 196200, 196199, 196197, 196194, 196187, 196185, 196107, 196091, 196090, 196089, 196085, 195958, 195955, 195935]
+#runNumber:		[196310, 196309, 196308, 196214, 196208, 196201, 196200, 196199, 196197, 196194, 196187, 196185, 196107, 196091, 196090, 196089, 196085, 195958, 195955, 195935]
+#runNumber:		[196310, 196309, 196308, 196214, 196208, 196201, 196200, 196199, 196197, 196194]
+runNumber:		[196187, 196185, 196107, 196091, 196090, 196089, 196085, 195958, 195955, 195935]
 #runNumber:              [196187, 196309]
 emcalCorrection:		emcal_correction.yaml
 emcalGeometryFilename:  	geometry_2015.root
 emcalLocal2MasterFilename:  	EMCALlocal2master.root
-skimClusterMinE:        10.0
-#splitMaxInputFileNumber: 	10.0
+#skimClusterMinE:        10.0
+splitMaxInputFileNumber: 	30.0
 #skimTrigger:                    MinBias
-#skimTrackMinPt:         	6.0
+#skimTrackMinPt:         	4.0

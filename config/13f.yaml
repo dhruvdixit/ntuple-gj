@@ -1,20 +1,25 @@
 gridWorkingDir:         workingdir
-gridOutputDir:          outputdir_13f_2run
-aliROOTVersion:         v5-09-34-1
-aliPhysicsVersion:      vAN-20180725-1
-package:                fastjet::v3.2.1_1.024-alice3-2
-package:                cgal::v4.6.3-25
-package:                boost::v1.59.0-19
-package:                MPFR::v3.1.3-4
-package:                GMP::v6.0.0-2
-package:                GCC-Toolchain::v4.9.3-alice3-1
+gridOutputDir:          outputdir_13f_3runs_noSkim_part5
+aliROOTVersion:         v5-09-44-1
+aliPhysicsVersion:      vAN-20190109-1
+package:                fastjet::v3.2.1_1.024-alice3-7
+package:                cgal::v4.6.3-28
+package:                boost::v1.59.0-22
+package:                MPFR::v3.1.3-3
+package:                GMP::v6.0.0-1
+package:                GCC-Toolchain::v4.9.3-alice3-9
 gridDataDir:            /alice/data/2013/LHC13f
 dataPattern:            /pass4/*/AliESDs.root
 runPrefix:              000
-#runNumber:              [197342, 197341, 197302, 197300, 197299, 197298, 197297, 197296, 197260, 197258, 197256, 197255, 197254, 197248, 197247, 197189, 197153, 197152, 197138, 197092, 197091, 197027, 197015, 197012, 197011, 197003, 196974, 196973, 196972, 196967, 196965, 196721, 196720, 196714, 196706, 196703, 196702, 196701, 196648, 196646, 196608, 196535, 196528]
-runNumber:              [197342, 197341]
+#runNumber:             [197342, 197341, 197302, 197300, 197299, 197298, 197297, 197296, 197260, 197258, 197256, 197255, 197254, 197248, 197247, 197189, 197153, 197152, 197138, 197092, 197091, 197027, 197015, 197012, 197011, 197003, 196974, 196973, 196972, 196967, 196965, 196721, 196720, 196714, 196706, 196703, 196702, 196701, 196648, 196646, 196608, 196535, 196528]
+#runNumber:             [197342, 197341, 197302]#OLD
+#runNumber:             [197342, 197341, 197302, 197300, 197299, 197298, 197297, 197296, 197260, 197258]#part1
+#runNumber:		[197256, 197255, 197254, 197248, 197247, 197189, 197153, 197152, 197138, 197092]#part2
+#runNumber:		[197091, 197027, 197015, 197012, 197011, 197003, 196974, 196973, 196972, 196967]#part3
+#runNumber:		[196965, 196721, 196720, 196714, 196706, 196703, 196702, 196701, 196648, 196646]#part4
+runNumber:		[196608, 196535, 196528]#part5
 emcalCorrection:                emcal_correction.yaml
 emcalGeometryFilename:          geometry_2015.root
 emcalLocal2MasterFilename:      EMCALlocal2master.root
-skimClusterMinE:        10.0
+#skimClusterMinE:        12.0
 splitMaxInputFileNumber:        30.0

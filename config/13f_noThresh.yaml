@@ -1,0 +1,23 @@
+gridWorkingDir:         workingdir
+gridOutputDir:          outputdir_13f_3runs_noThresh_test
+aliROOTVersion:         v5-09-44-1
+aliPhysicsVersion:      vAN-20190109-1
+package:                fastjet::v3.2.1_1.024-alice3-7
+package:                cgal::v4.6.3-28
+package:                boost::v1.59.0-22
+package:                MPFR::v3.1.3-3
+package:                GMP::v6.0.0-1
+package:                GCC-Toolchain::v4.9.3-alice3-9
+gridDataDir:            /alice/data/2013/LHC13f
+dataPattern:            /pass4/*/AliESDs.root
+runPrefix:              000
+#runNumber:              [196433, 196474, 196475, 196477, 196528, 196533, 196535, 196563, 196564, 196566, 196568, 196601, 196605, 196608, 196646, 196648, 196701, 196702, 196703, 196706]
+#runNumber:		[196714, 196720, 196721, 196722, 196772, 196773, 196774, 196869, 196870, 196874, 196876, 196965, 196967, 196972, 196973, 196974, 197003, 197011, 197012, 197015]
+#runNumber:		[197027, 197031, 197089, 197090, 197091, 197092, 197094, 197098, 197099, 197138, 197139, 197142, 197143, 197144, 197145, 197147, 197148, 197149, 197150, 197152]
+#runNumber:		[197153, 197184, 197189, 197247, 197248, 197254, 197255, 197256, 197258, 197260, 197296, 197297, 197298, 197299, 197300, 197302, 197341, 197342, 197348, 197349]
+runNumber:		[197351, 197386, 197387, 197388]
+emcalCorrection:                emcal_correction.yaml
+emcalGeometryFilename:          geometry_2015.root
+emcalLocal2MasterFilename:      EMCALlocal2master.root
+#skimClusterMinE:        12.0
+splitMaxInputFileNumber:        30.0
