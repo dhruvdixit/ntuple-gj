@@ -86,6 +86,9 @@ AddAliAnalysisTaskNTGJ(TString name,
     reco_util->SwitchOnRecalibration();
     reco_util->SwitchOnRunDepCorrection();
 
+    physics_selection = true;
+    physics_selection_mc_analysis = false;
+    physics_selection_pileup_cut = true;
     if (physics_selection) {
         gROOT->LoadMacro("$ALICE_PHYSICS/OADB/macros/"
                          "AddTaskPhysicsSelection.C");
@@ -93,8 +96,9 @@ AddAliAnalysisTaskNTGJ(TString name,
         AliPhysicsSelectionTask* physics_selection_task =
             AddTaskPhysicsSelection(physics_selection_mc_analysis,
                                     physics_selection_pileup_cut);
+	task->SelectCollisionCandidates(AliVEvent::kCaloOnly)
     }
-
+    
     mgr->AddTask(task);
     mgr->ConnectInput(task, 0, mgr->GetCommonInputContainer());
 
