@@ -52,7 +52,8 @@ void runNTGJ(const char *config_filename = "config/lhc16c2_1run.yaml",
     package_list.SetOwner();
     fclose(fp);
 
-    if (package_list.GetSize() == 0) {
+    //Old root
+    /*if (package_list.GetSize() == 0) {
         package_list.Add((TObject *)(new TObjString(
             "fastjet::v3.2.1_1.024-alice1-4")));
         // Compiling against CGAL requires explicit include paths to
@@ -75,6 +76,32 @@ void runNTGJ(const char *config_filename = "config/lhc16c2_1run.yaml",
         //   Output file AnalysisResults.root not found. Job FAILED !
         package_list.Add((TObject *)(new TObjString(
             "GCC-Toolchain::v4.9.3-alice3-1")));
+	    }//*/
+
+    //New Root
+    if (package_list.GetSize() == 0) {
+        package_list.Add((TObject *)(new TObjString(
+            "fastjet::v3.2.1_1.024-alice3-71")));
+        // Compiling against CGAL requires explicit include paths to
+        // Boost, MPFR, and GMP
+        package_list.Add((TObject *)(new TObjString(
+            "cgal::v4.6.3-39")));
+        package_list.Add((TObject *)(new TObjString(
+            "boost::v1.72.0-alice1-11")));
+        package_list.Add((TObject *)(new TObjString(
+            "MPFR::v3.1.3-5")));
+        package_list.Add((TObject *)(new TObjString(
+            "GMP::v7.0.0-34")));
+        // The grid ROOT packages tend to lack a GCC 4.9.x =
+        // CXXABI_1.3.8 dependency (see also
+        // https://gcc.gnu.org/onlinedocs/libstdc++/manual/abi.html),
+        // which causes jobs to fail at run time with the message:
+        //
+        //   root: /usr/lib64/libstdc++.so.6: version `CXXABI_1.3.8'
+        //   not found (required by root)
+        //   Output file AnalysisResults.root not found. Job FAILED !
+        package_list.Add((TObject *)(new TObjString(
+            "GCC-Toolchain::v7.3.0-alice2-5")));
     }
 
     for (Int_t i = 0; i < package_list.GetSize(); i++) {

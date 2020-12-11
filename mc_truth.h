@@ -53,8 +53,29 @@ namespace {
         if (!(s != NULL && p != NULL)) {
             return false;
         }
+	
+	//Current AliRoot versions
+        /*return pdg_is_parton(p->PdgCode()) &&
+            !(p->GetDaughterFirst() > 0 &&
+              p->GetDaughterFirst() < s->GetNprimary() &&
+              dynamic_cast<AliMCParticle *>(
+                mc_event->GetTrack(
+                    p->GetDaughterFirst())) != NULL &&
+              pdg_is_parton(dynamic_cast<AliMCParticle *>(
+                mc_event->GetTrack(
+                    p->GetDaughterFirst()))->PdgCode())) &&
+            !(p->GetDaughterLast() > 0 &&
+              p->GetDaughterLast() < s->GetNprimary() &&
+              dynamic_cast<AliMCParticle *>(
+                mc_event->GetTrack(
+                    p->GetDaughterLast())) != NULL &&
+              pdg_is_parton(dynamic_cast<AliMCParticle *>(
+                mc_event->GetTrack(
+                    p->GetDaughterLast()))->PdgCode())) &&
+		    !(p->Px() == 0 && p->Py() == 0);//*/
 
-        return pdg_is_parton(p->PdgCode()) &&
+	//Old AliRootVerion
+	return pdg_is_parton(p->PdgCode()) &&
             !(p->GetFirstDaughter() > 0 &&
               p->GetFirstDaughter() < s->GetNprimary() &&
               dynamic_cast<AliMCParticle *>(
@@ -71,7 +92,7 @@ namespace {
               pdg_is_parton(dynamic_cast<AliMCParticle *>(
                 mc_event->GetTrack(
                     p->GetLastDaughter()))->PdgCode())) &&
-            !(p->Px() == 0 && p->Py() == 0);
+		    !(p->Px() == 0 && p->Py() == 0);//*/
     }
 
 }

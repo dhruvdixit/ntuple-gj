@@ -1410,13 +1410,13 @@ void AliAnalysisTaskNTGJ::UserExec(Option_t *option)
                 _branch_mc_truth_first_parent_phi
                     [_branch_nmc_truth] = half(pp->Phi());
                 _branch_mc_truth_sibling_index[_branch_nmc_truth] =
-                    *iterator ==
-                    pp->Particle()->GetFirstDaughter() ?
-                    pp->Particle()->GetLastDaughter() :
-                    *iterator ==
-                    pp->Particle()->GetLastDaughter() ?
-                    pp->Particle()->GetFirstDaughter() :
-                    USHRT_MAX;
+		  //New AliRoot
+		  //*iterator == pp->Particle()->GetDaughterFirst() ? pp->Particle()->GetDaughterLast() :
+		  //*iterator == pp->Particle()->GetDaughterLast() ? pp->Particle()->GetDaughterFirst() :
+		  //Old AliRoot
+		  *iterator == pp->Particle()->GetFirstDaughter() ? pp->Particle()->GetLastDaughter() :
+		  *iterator == pp->Particle()->GetLastDaughter() ? pp->Particle()->GetFirstDaughter() :
+		  USHRT_MAX;
             }
 
             _branch_nmc_truth++;

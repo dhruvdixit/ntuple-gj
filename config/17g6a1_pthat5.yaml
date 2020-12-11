@@ -1,5 +1,5 @@
 gridWorkingDir:         workingdir
-gridOutputDir:          outputdir_17g6a1_pthat5_wNeutrals
+gridOutputDir:          outputdir_17g6a1_pthat5_wNeutrals_woCrossTalk
 aliROOTVersion:         v5-09-44-1
 aliPhysicsVersion:      vAN-20190109-1
 package:                fastjet::v3.2.1_1.024-alice3-7
