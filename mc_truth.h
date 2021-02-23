@@ -55,7 +55,7 @@ namespace {
         }
 	
 	//Current AliRoot versions
-        /*return pdg_is_parton(p->PdgCode()) &&
+        return pdg_is_parton(p->PdgCode()) &&
             !(p->GetDaughterFirst() > 0 &&
               p->GetDaughterFirst() < s->GetNprimary() &&
               dynamic_cast<AliMCParticle *>(
@@ -75,7 +75,7 @@ namespace {
 		    !(p->Px() == 0 && p->Py() == 0);//*/
 
 	//Old AliRootVerion
-	return pdg_is_parton(p->PdgCode()) &&
+	/*return pdg_is_parton(p->PdgCode()) &&
             !(p->GetFirstDaughter() > 0 &&
               p->GetFirstDaughter() < s->GetNprimary() &&
               dynamic_cast<AliMCParticle *>(

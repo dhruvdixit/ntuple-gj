@@ -9,7 +9,7 @@ root=root; exec $root -l -b -q "$0($(join_by \",\" \"$*\" | \
 #include <TSystem.h>
 
 void runNTGJ(const char *config_filename = "config/lhc16c2_1run.yaml",
-             const char *run_mode = "test")
+             const char *run_mode = "full")
 {
     gROOT->ProcessLine(".include $ROOTSYS/include");
     gROOT->ProcessLine(".include $ALICE_ROOT/include");
